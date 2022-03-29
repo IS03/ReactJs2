@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
@@ -9,8 +9,9 @@ function App() {
 
       <header className="App-header">
 
-
+      <ItemListContainer greeting={"usuario número 1"} />
       </header>
+
     </div>
   );
 }

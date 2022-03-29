@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.carrito {
+  width: 25px;
+  height: 25px;
+  padding-top: 14px;
+}
+
+.greeting {
+  font-size: 30px;
+
+}
