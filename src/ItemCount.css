@@ -1,0 +1,25 @@
+.botonContador {
+    width: 150px;
+    height: 25px;
+    background-color: rgb(0, 238, 255);
+    border-color: black;
+    padding-bottom: 25px;
+}
+
+.divContador {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contador {
+    width: 50px;
+    height: 20px;
+}
+
+.botonContadorAgregar {
+    width: 500px;
+    height: 28px;
+    background-color: rgb(0, 238, 255);
+    border-color: black;
+    margin-top: 30px;
+}

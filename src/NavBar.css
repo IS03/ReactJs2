@@ -1,5 +1,6 @@
 .NavBar {
-    background-color: rgb(134, 134, 134);
+    background-color: rgb(58, 58, 58);
+    color: white;
     box-shadow: 0 10px 10px rgba(0,0,0,0.3);
     display: flex;
     justify-content: space-around;
@@ -11,5 +12,5 @@
 }
 
 .logo {
-    color: aqua;
+    color: rgb(0, 195, 255);
 }

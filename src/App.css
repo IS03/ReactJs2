@@ -14,8 +14,7 @@
 }
 
 .App-header {
-  background-color: #3a3a3a;
-  min-height: 100vh;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,5 +45,14 @@
 
 .greeting {
   font-size: 30px;
+}
+
+.numeroCarrito {
+  color: white;
+}
+
+.divCarrito {
+  display: flex;
+  flex-direction: row;
 
 }
