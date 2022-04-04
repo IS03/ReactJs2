@@ -5,12 +5,14 @@ const Contador = ({initial, stock, onAdd}) => {
     const [contador,setContador] = useState(1)
     
     const sumarContador = () => {
+        if (contador < stock ){
         setContador(contador + 1)
-    }
+    }}
 
     const restarContador = () => {
+        if (contador > initial){
         setContador(contador - 1)
-    }
+    }}
 
     const ceroContador = () => {
         setContador(contador === initial)
