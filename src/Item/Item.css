@@ -1,0 +1,23 @@
+.botonContadorCompras {
+    background-color: rgb(0, 238, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+.divItem {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: double;
+    border-color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+  
+.h1Item {
+    padding-bottom: 5px;
+}
+  
+.imgProductos {
+    width: 300px;
+    height: auto;
+}
