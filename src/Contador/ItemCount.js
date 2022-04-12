@@ -15,12 +15,11 @@ const Contador = ({initial, stock, onAdd}) => {
     }}
 
     const ceroContador = () => {
-        setContador(contador === initial)
+        setContador(initial)
     }
 
     if (contador > stock)  {
         alert("No hay más stock! el stock es de: " + stock)
-
     }
 
     return (

@@ -1,8 +1,10 @@
 import './Item.css';
-import Contador from './ItemCount';
+import Contador from '../Contador/ItemCount';
 import { getProducts } from '../asyncmock';
+import { Link } from 'react-router-dom';
 
-const Item = ({nombre, img, precio} ) => {
+
+const Item = ({nombre, img, precio, stock, id} ) => {
     
     const handleOnAdd = (cantidad) => {
         console.log ("Se agregaron "+ cantidad + " productos.")
@@ -20,13 +22,13 @@ const Item = ({nombre, img, precio} ) => {
                 ${precio}
             </p>
             
-            <div>
-                <button className="botonContadorCompras">
-                    Ver Detalles
-                </button>
-            </div>
+            <Link to={"/detail/" + id} className="botonContadorCompras">
+                Ver Detalles
+            </Link>
 
-            <Contador initial={1} stock={10} onAdd={handleOnAdd}/>
+
+
+            <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>
 
         </div>
     )

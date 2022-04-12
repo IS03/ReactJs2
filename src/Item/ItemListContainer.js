@@ -1,4 +1,4 @@
-import Contador from "./ItemCount"
+import Contador from "../Contador/ItemCount"
 import { useEffect } from "react"
 import { useState } from "react"
 import ItemList from "./ItemList"
