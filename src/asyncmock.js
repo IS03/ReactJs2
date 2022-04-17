@@ -1,6 +1,6 @@
 const products = [
     {
-        id: 1,
+        id: "1",
         nombre: "Iphone 8 plus",
         precio: 175000,
         img: "https://http2.mlstatic.com/D_NQ_NP_711845-MLA43701553365_102020-O.webp",
@@ -8,7 +8,7 @@ const products = [
         info: "El Apple iPhone 8 Plus conserva la misma pantalla de su antecesor, con 5.5 pulgadas a resolución Full HD, con un nuevo diseño que combina aluminio con vidrio adelante y atrás. Por dentro, el iPhone 8 Plus está potenciado por el nuevo procesador A11 Bionic. El iPhone 8 Plus vuelve a contar con una cámara dual de 12 MP, con zoom óptico 2X, y aperturas combinables para efectos de fotografía y slow motion en 1080p y agrega soporte para carga inalámbrica en su batería con el mismo rendimiento que en el iPhone 7 Plus."
     },
     {
-        id: 2,
+        id: "2",
         nombre: "Iphone XS",
         precio: 235000,
         img: "https://http2.mlstatic.com/D_NQ_NP_888921-MLA31002298922_062019-O.webp",
@@ -17,7 +17,7 @@ const products = [
         
     },
     {
-        id: 3,
+        id: "3",
         nombre: "Iphone 11",
         precio: 189000,
         img: "https://http2.mlstatic.com/D_NQ_NP_724631-MLA46114990506_052021-O.webp",
@@ -25,7 +25,7 @@ const products = [
         info:"El Apple iPhone 11 es el sucesor del iPhone Xr para el 2019. Este año el iPhone 11 llega con una pantalla de 6.1 pulgadas con resolución Liquid Retina y potenciado por un procesador Apple A13 Bionic con 64GB, 128GB o 256GB de almacenamiento interno. La cámara posterior del iPhone 11 ahora es dual, con un lente regular de 12 MP y otro gran angular de 12 MP, mientras que su cámara frontal es de 12 MP. El iPhone 11 cuenta con una batería de 3110 mAh con carga rápida, parlantes stereo con sonido Dolby Atmos, carga inalámbrica y utiliza reconocimiento de rostro Face ID para seguridad."
     },
     {
-        id: 4,
+        id: "4",
         nombre: "Iphone 13 Pro Max",
         precio: 475000,
         img: "https://http2.mlstatic.com/D_NQ_NP_803693-MLA47776072534_102021-O.webp",
@@ -34,18 +34,19 @@ const products = [
     }
 ]
 
-export const getProducts = () => {
+export const getProducts = (categoryId) => {
     return new Promise (resolve => {
-        setTimeout (() => {
-            resolve (products)
-        }, 2000)
+        setTimeout(() => {
+            resolve(categoryId ? products.filter(prod => prod.category === categoryId) : products)
+        }, 500)
     })
 }
 
-export const getProductsById = (id) => {
+export const getProductsbyId = (id) => {
     return new Promise (resolve => {
-        setTimeout (() => {
-            resolve (products.find(prod => prod.id === id))
-        }, 2000)
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
+        }, 500)
     })
 }
+

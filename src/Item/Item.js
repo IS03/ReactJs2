@@ -9,8 +9,14 @@ const Item = ({nombre, img, precio, stock, id} ) => {
     const handleOnAdd = (cantidad) => {
         console.log ("Se agregaron "+ cantidad + " productos.")
     }
+
+    const handleClick = (e) => {
+        e.stopPropagation()
+        console.log('item clicked')
+    }
     
     return(
+        <div className='itemConteiner'>
         <div className="divItem" >
             <h1 className="h1Item">
             {nombre}
@@ -22,7 +28,7 @@ const Item = ({nombre, img, precio, stock, id} ) => {
                 ${precio}
             </p>
             
-            <Link to={"/detail/" + id} className="botonContadorCompras">
+            <Link to={`/detail/${id}`} className="botonVerDetalles">
                 Ver Detalles
             </Link>
 
@@ -30,6 +36,7 @@ const Item = ({nombre, img, precio, stock, id} ) => {
 
             <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>
 
+        </div>
         </div>
     )
 } 

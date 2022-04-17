@@ -1,7 +1,7 @@
-import './Item.css';
 import Contador from '../Contador/ItemCount';
 import { getProducts } from '../asyncmock';
 import "./ItemDetail.css"
+import ItemDetailContainer from './ItemDetailContainer';
 
 const ItemDetail = (nombre, precio, img, stock, info) => {
 
@@ -10,6 +10,7 @@ const ItemDetail = (nombre, precio, img, stock, info) => {
     }
 
     return (
+        <ItemDetailContainer>
         <div className="divItem" >
         <h1 className="h1Item">
         {nombre}
@@ -28,6 +29,7 @@ const ItemDetail = (nombre, precio, img, stock, info) => {
         <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>
 
     </div>
+    </ItemDetailContainer>
     );
 
 }
