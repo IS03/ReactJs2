@@ -1,0 +1,22 @@
+.etiqueta {
+    margin-right: 100px;
+    color: white;
+    padding: 20px;
+    background-color: rgb(70, 70, 70);
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.3);
+    height: 150px;
+  }
+  
+  .titulo_etiqueta {
+    color: white;
+    font-size: 20px;
+    font-family: 'Mohave', sans-serif;
+  }
+  
+  .texto_etiqueta {
+    color: white;
+    font-size: 15px;
+    font-family: 'Mohave', sans-serif;
+  }

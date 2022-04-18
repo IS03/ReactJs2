@@ -13,4 +13,29 @@
 
 .logo {
     color: rgb(0, 195, 255);
+    text-decoration: none;
+    font-size: large;
+}
+
+.logo:hover {
+    color: rgb(0, 175, 175);
+}
+
+.cat:hover {
+    color: rgb(150, 150, 150);
+}
+
+.categoriasDiv {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+.cat {
+  color: white;
+  text-decoration: none;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 18px;
+  font-size: medium;
 }
