@@ -21,3 +21,26 @@
     justify-content: center;
     align-items: center;
 }
+
+.irAlCarrito {
+    width: 250px;
+    height: auto;
+    font-size: large;
+    color: black;
+    background-color: rgb(145, 145, 145);
+    border-color: rgb(180, 0, 0);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 3px;
+    border-width: 2px;
+    border-style: outset;
+}
+
+.divIrAlCarrito{
+    display: flex;
+    justify-content: space-around;
+}
+
+.linkIrAlCarrito {
+    text-decoration: none;
+}

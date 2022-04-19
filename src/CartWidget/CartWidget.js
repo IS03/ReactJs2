@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom"
 
 const CartWidget = () => {
     return (
+        
         <div className="divCarrito">
-            <a href="#carrito">
+            <Link to='/cart'>
                 <img src='./carrito2.png' className="carrito">
                 </img>
-            </a>
-            <p> 0 </p>
+                
+            </Link>
+            
         </div>
     )
 }

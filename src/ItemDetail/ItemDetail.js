@@ -1,11 +1,16 @@
 import Contador from '../Contador/ItemCount';
 import "./ItemDetail.css"
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const ItemDetail = ({nombre, precio, img, stock, info}) => {
 
+    const [quantity, setQuantity]= useState(0)
+
     const handleOnAdd = (cantidad) => {
         console.log ("Se agregaron "+ cantidad + " "+ nombre)
+        setQuantity(cantidad)
         Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -28,8 +33,9 @@ const ItemDetail = ({nombre, precio, img, stock, info}) => {
                 <p className="precioItem">
                     ${precio}
                 </p>
+        
+                {quantity > 0 ? <div className='divIrAlCarrito'><Link to='/cart' className='linkIrAlCarrito'><h1 className='irAlCarrito'>Ir al carrito</h1></Link></div> : <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>}
 
-                <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>
                 <p className="">
                     Stock disponible: {stock}
                 </p>    
