@@ -37,12 +37,6 @@
 }
 
 
-.carrito {
-  width: 25px;
-  height: 25px;
-  padding-top: 14px;
-}
-
 .greeting {
   font-size: 30px;
 }
@@ -61,4 +55,24 @@
   color: red;
   padding-left: 650px;
   padding-top: 200px;
+}
+
+.carrito {
+  width: 25px;
+  height: 25px;
+  padding-top: 14px;
+}
+
+.contadorCarrito {
+  text-decoration: none;
+  color: white;
+  padding-top: 15px;
+  padding-left: 15px;
+
+}
+
+.divCarrito {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
 }

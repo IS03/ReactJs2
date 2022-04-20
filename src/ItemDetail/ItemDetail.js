@@ -2,11 +2,14 @@ import Contador from '../Contador/ItemCount';
 import "./ItemDetail.css"
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import CartContext from '../Context/CartContext';
 
-const ItemDetail = ({nombre, precio, img, stock, info}) => {
+const ItemDetail = ({id, nombre, precio, img, stock, info}) => {
 
     const [quantity, setQuantity]= useState(0)
+
+    const { addItem, isInCart } = useContext(CartContext)
 
     const handleOnAdd = (cantidad) => {
         console.log ("Se agregaron "+ cantidad + " "+ nombre)
@@ -18,6 +21,12 @@ const ItemDetail = ({nombre, precio, img, stock, info}) => {
             showConfirmButton: false,
             timer: 1500
           })
+
+          const productObj = {
+            id, nombre, precio
+        }
+
+        addItem ({...productObj, quantity: cantidad})
     }
 
     return (
@@ -34,7 +43,7 @@ const ItemDetail = ({nombre, precio, img, stock, info}) => {
                     ${precio}
                 </p>
         
-                {quantity > 0 ? <div className='divIrAlCarrito'><Link to='/cart' className='linkIrAlCarrito'><h1 className='irAlCarrito'>Ir al carrito</h1></Link></div> : <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>}
+                {isInCart(id) > 0 ? <div className='divIrAlCarrito'><Link to='/cart' className='linkIrAlCarrito'><h1 className='irAlCarrito'>Ir al carrito</h1></Link></div> : <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>}
 
                 <p className="">
                     Stock disponible: {stock}
