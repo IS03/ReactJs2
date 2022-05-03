@@ -1,0 +1,71 @@
+input {
+    border-radius: 3px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    font-family: 'BIZ UDPMincho', serif;
+    padding-left: 0.5rem;
+    border: outset;
+}
+
+label {
+    font-size: 16px;
+    font-family: 'BIZ UDPMincho', serif;
+    margin-bottom: 3rem;
+}
+
+.tituloCompra {
+    font-family: 'BIZ UDPMincho', serif;
+    text-align: center;
+    font-size: 40px;
+    margin: 40px;
+    color: rgb(180, 0, 0);
+}
+
+.codigoCompra{
+    font-family: 'BIZ UDPMincho', serif;
+    text-align: center;
+    margin: 40px;
+}
+
+.Code {
+    margin: 3rem 0;
+    font-weight: bold;
+    font-family: 'BIZ UDPMincho', serif;
+    color:black;
+}
+
+.Form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.Field {
+    display: flex;
+    flex-direction: row;
+}
+
+.Finish {
+    border: outset;
+    padding: 15px;
+    width: 250px;
+    cursor: pointer;
+    margin-left: 50px;
+    background-color: rgb(145, 145, 145);
+    border-color: rgb(180, 0, 0);
+    color: white;
+    text-decoration: none;
+}
+
+.Title {
+    font-size: 40px;
+    text-align: start;
+    margin-left: 800px;
+    color: rgb(180, 0, 0);
+}

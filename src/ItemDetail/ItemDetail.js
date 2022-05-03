@@ -9,7 +9,7 @@ const ItemDetail = ({id, nombre, precio, img, stock, info}) => {
 
     const [quantity, setQuantity]= useState(0)
 
-    const { addItem, isInCart } = useContext(CartContext)
+    const { addItem, isInCart, getQuantityProd } = useContext(CartContext)
 
     const handleOnAdd = (cantidad) => {
         console.log ("Se agregaron "+ cantidad + " "+ nombre)
@@ -42,8 +42,8 @@ const ItemDetail = ({id, nombre, precio, img, stock, info}) => {
                 <p className="precioItem">
                     ${precio}
                 </p>
-        
-                {isInCart(id) > 0 ? <div className='divIrAlCarrito'><Link to='/cart' className='linkIrAlCarrito'><h1 className='irAlCarrito'>Ir al carrito</h1></Link></div> : <Contador initial={1} stock={stock} onAdd={handleOnAdd}/>}
+                
+                {false ? <Link to='/cart' className='goCart'><span>Ir al carrito</span></Link> : <Contador initial={getQuantityProd(id)} stock={stock} onAdd={handleOnAdd} />}
 
                 <p className="">
                     Stock disponible: {stock}

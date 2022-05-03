@@ -1,0 +1,37 @@
+.prodCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.prodCart p{
+    width: 200px; 
+}
+
+.RemoveButton {
+    padding: 15px;
+    font-family: 'BIZ UDPMincho', serif;
+    margin: 25px;
+    border-color: rgb(180, 0, 0);
+    border: inset;
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.datosCarrito {
+    font-size: large;
+    width: auto;
+}
+
+.cantidadCarrito {
+    margin-left: 40px;
+}
+
+.subTotalCarrito{
+    margin-left: 20px;
+}

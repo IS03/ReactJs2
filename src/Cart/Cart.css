@@ -1,0 +1,37 @@
+.PageHeader {
+    margin: 0 35px;
+}
+
+.TituloCart {
+    font-size: 40px;
+    text-align: start;
+    margin-left: 800px;
+    color: rgb(180, 0, 0);
+}
+
+.Total {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 850px;
+}
+
+.BotonesCart {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 720px;
+}
+
+.Btn {
+    border: outset;
+    padding: 15px;
+    width: 300px;
+    cursor: pointer;
+    margin: 25px;
+    background-color: rgb(145, 145, 145);
+    border-color: rgb(180, 0, 0);
+    color: white;
+    text-decoration: none;
+}
+

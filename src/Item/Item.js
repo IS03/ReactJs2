@@ -1,13 +1,14 @@
 import './Item.css';
-import Contador from '../Contador/ItemCount';
-import { getProducts } from '../asyncmock';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
-import Footer from '../Etiqueta/Etiqueta';
 import Etiqueta from '../Etiqueta/Etiqueta';
 
 
 const Item = ({nombre, img, precio, stock, id} ) => {
+
+    const handleClick = (e) => {
+        e.stopPropagation()
+    }
     
     const handleOnAdd = (cantidad) => {
         console.log ("Se agregaron "+ cantidad + " "+ nombre)
@@ -21,7 +22,7 @@ const Item = ({nombre, img, precio, stock, id} ) => {
     }
     
     return(
-        <div className='itemConteiner'>
+        <div className='itemConteiner'  onClick={handleClick}>
         <div className="divItem" >
             <h1 className="h1Item">
             {nombre}
