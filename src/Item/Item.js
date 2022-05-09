@@ -23,27 +23,28 @@ const Item = ({nombre, img, precio, stock, id} ) => {
     
     return(
         <div className='itemConteiner'  onClick={handleClick}>
-        <div className="divItem" >
-            <h1 className="h1Item">
-            {nombre}
-            </h1>
+            <div className="divItem" >
+                <h1 className="h1Item">
+                {nombre}
+                </h1>
 
-            <img src={img} className="imgProductos"></img>
+                <img src={img} className="imgProductos"></img>
 
-            <p className="precioItem">
-                ${precio}
-            </p>
-            
-            <Link to={`/detail/${id}`} className="botonVerDetalles">
-                Ver detalles
-            </Link>
+                <p className="precioItem">
+                    ${precio}
+                </p>
+                
+                <Link to={`/detail/${id}`} className="botonVerDetalles">
+                    Ver detalles
+                </Link>
 
-            <p className="">
-                Stock disponible: {stock}
-            </p>
+                <p className="">
+                    Stock disponible: {stock}
+                </p>
+            </div>
 
-        </div>
         <Etiqueta/>
+        
         </div>
         
     )

@@ -13,7 +13,6 @@ const Form = () => {
 
     const [orderId, setOrderId] = useState(null)
     
-
     const { cart, totalCost } = useContext(CartContext)
 
     const handleSubmit = (e) => {
@@ -81,8 +80,8 @@ const Form = () => {
     if (orderId) {
         return (
             <>  
-                <h1 className="tituloCompra">Muchas gracias por tu compra!</h1>
-                <h3 className="codigoCompra">Tu código de compra es: {orderId}</h3>
+            <h1 className="tituloCompra">Muchas gracias por tu compra!</h1>
+            <h3 className="codigoCompra">Tu código de compra es: {orderId}</h3>
             </>
         )
     }

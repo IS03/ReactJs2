@@ -3,9 +3,9 @@ import "./Etiqueta.css"
 const Etiqueta = () => {
     return (
         <div className="etiqueta">
-                    <p className="titulo_etiqueta">SEMANA DE DESCUENTOS</p>
-                    <p className="texto_etiqueta">Seguime en mis redes</p>
-                    <p className="texto_etiqueta">@ignasenes</p>
+            <p className="titulo_etiqueta">SEMANA DE DESCUENTOS</p>
+            <p className="texto_etiqueta">Seguime en mis redes</p>
+            <p className="texto_etiqueta">@ignasenes</p>
         </div>   
     )
 }

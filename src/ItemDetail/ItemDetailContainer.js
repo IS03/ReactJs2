@@ -1,4 +1,3 @@
-import { getProductsbyId } from "../asyncmock";
 import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
@@ -14,6 +13,7 @@ const ItemDetailContainer = ({ setCart, cart }) => {
     const { productId } = useParams()
 
     useEffect(() => {
+        
         getDoc(doc(firestoreDb, 'products', productId)).then(response => {
             console.log(response)
             const product = { id: response.id, ...response.data()}

@@ -27,10 +27,12 @@ export const CartContextProvider = ({ children }) => {
 
 
     const getQuantity = () => {
+
         let contador = 0
         cart.forEach(prod => {
             contador += prod.quantity
         })
+        
         return contador
     }
 

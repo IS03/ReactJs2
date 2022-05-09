@@ -18,7 +18,7 @@ const NavBar = () => {
     return (
         <nav className="NavBar">
             <Link to="/" className="logo">
-            <p>E-COMMERCE</p>
+                <p>E-COMMERCE</p>
             </Link>
 
             <div className="categoriasDiv">
@@ -26,6 +26,7 @@ const NavBar = () => {
                 className="cat">
                     {cat.description}</NavLink>)}   
             </div>
+            
             <CartWidget/>
         </nav>
     )

@@ -22,12 +22,12 @@ const Contador = ({initial=1, stock, onAdd}) => {
 
     return (
         <>  <div className="divContador">
-            <button onClick={restarContador} className="botonContador"><img src="/mas1.png"></img></button>
-            <p className="contador">{contador}</p>
-            <button onClick={sumarContador} className="botonContador"><img src="/menos1.png"></img></button> 
-            <button onClick={ceroContador} className="botonContador"><img src="/basura.png"></img></button>   
-              
+                <button onClick={restarContador} className="botonContador"><img src="/mas1.png"></img></button>
+                <p className="contador">{contador}</p>
+                <button onClick={sumarContador} className="botonContador"><img src="/menos1.png"></img></button> 
+                <button onClick={ceroContador} className="botonContador"><img src="/basura.png"></img></button>   
             </div>
+            
             <button onClick={() => onAdd (contador) } className="botonContadorAgregar">Agregar al Carrito</button>  
         </>
     ) 
