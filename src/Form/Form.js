@@ -3,11 +3,12 @@ import CartContext from '../Context/CartContext'
 import { useContext, useState } from "react"
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from "../services/firebase"
+import Swal from 'sweetalert2'
 
 
 const Form = () => {
 
-    const [input, setInput] = useState('')
+    const [input, setInput] = useState({nombre: '', telefono: '', correo: '', correo: '', correoConfirm: '' })
 
     const [loading, setLoading] = useState(false)
 
@@ -15,10 +16,25 @@ const Form = () => {
     
     const { cart, totalCost } = useContext(CartContext)
 
+    const [buttonDisabled, setButtonDisabled] = useState(true)
+
     const handleSubmit = (e) => {
         e.preventDefault()
     }
 
+    const onBlurHandler = (event) =>  {
+        if (input.mail === input.mailConfirm) {
+            setButtonDisabled(false)
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Mail incorrecto!',
+                footer: 'Chequea tus datos por favor'
+            })
+        }
+    }
+    
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -98,12 +114,13 @@ const Form = () => {
                 <div className='Field'>
                     <div className='Inputs'>
                         <label><input placeholder="Nombre y apellido" type='text' onChange={handleChange} name="nombre" value={input.nombre}/></label>
-                        <label><input placeholder="Email" type='text' onChange={handleChange} name="correo" value={input.correo}/></label>
+                        <label><input required className={(input.mailConfirm === input.mail) ? 'greenOk' : 'redWrong' } placeholder="Email" type='text' onChange={handleChange} name="correo" value={input.correo || ""} /></label>
+                        <label><input required className={(input.mailConfirm === input.mail) ? 'greenOk' : 'redWrong'} placeholder="Nuevamente tu Email" type='text' onChange={handleChange} onBlur={onBlurHandler} name="correoConfirm" value={input.correoConfirm || ""} /></label>
                         <label><input placeholder="Dirección de envío" type='text' onChange={handleChange} name="direccion" value={input.direccion}/></label>
                         <label><input placeholder="Teléfono" type="text" onChange={handleChange} name="telefono" value={input.telefono}/></label>
                     </div>
                     <div>
-                        <button onClick={() => createOrder()} className="Finish">Finalizar compra</button>
+                        <button onClick={() => createOrder()} className="Finish" disabled={buttonDisabled}>Finalizar compra</button>
                     </div>
                 </div>
             </div>

@@ -69,3 +69,11 @@ label {
     margin-left: 800px;
     color: rgb(180, 0, 0);
 }
+
+.redWrong {
+    border: 2px solid rgb(122, 11, 11);
+}
+
+.greenOk {
+    border: 2px solid rgba(0, 128, 0, 0.482);
+}
