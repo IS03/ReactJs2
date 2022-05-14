@@ -1,82 +1,39 @@
 # RECORRIDO DE COMPRA
 
+![Recorrido compra completa GIF](https://user-images.githubusercontent.com/87728844/168406989-1d5f7840-5cf4-4fbc-b5ff-cb30db6f5b5f.gif)
 
-https://user-images.githubusercontent.com/87728844/167460452-0562e8b7-995e-4d80-a0fb-c1686a26584c.mp4
+#
 
+# Cloud Firestore
 
+Campos : Category, img, info, nombre, precio y stock.
 
+#
 
-# Getting Started with Create React App
+# Funciones del carrito
+  
+  - addItem : esta función se encarga de agregar al carrito los productos, junto con la funcion isInCArt, que evalúa si ya este este mismo producto en el carrito.
+  
+  - getQuantity : esta función se encarga de mostrar la cantidad de productos en el cartwidget.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  - getQuantityProd : se encarga de almacenar la cantidad que agregas al carrito de cada producto.
 
-## Available Scripts
+  - clearCart : sirve para vaciar el carrito de compras.
 
-In the project directory, you can run:
+  - removeItem : esta quita productos del carrito, junto con toda la info.
 
-### `npm start`
+  - totalCost : esta se encarga de calcular el valor de la compra antes de ingresar los datos.
 
+#
 
+# Descripción del E-COMMERCE
 
+En el home se ven todos los productos de la fire base como presentación, desde ahí podrás ingresar a ver los detalles donde esta la descripción, imagen, stock y tendrás la opción para añadir al carrito.
+En la barra de navegación podrás ver y seleccionar las 3 categorias de los productos, al ingresar a alguna de ellas, verás solo los productos de esa categoria, también pudiendo ingresar a los detalles y agregar al carrito.
 
+Durante la navegación podrás observar arriba a la derecha, cuantos productos tenés en tu carrito, en cualquier momento podés ingresar al mismo para finalizar la compra.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Al ir al carrito podrás vaciar si lo quieres, eliminar productos, o finalizar la compra.
+Cuando quieres finalzar la compra, tienes que llenar un formulario con tus datos para que se procese y te de tu orden de compra.
+ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
